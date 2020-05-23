@@ -3,11 +3,11 @@ public class Calculator {
         if ("".equals(numbers))
             return 0;
         else {
-            String[] individualNumbers = numbers.split(",");
-            if (individualNumbers.length == 1) {
-                return getIntFrom(individualNumbers[0]);
+            int result = 0;
+            for (String number : numbers.split(",")) {
+                result += getIntFrom(number);
             }
-            return getIntFrom(individualNumbers[0]) + getIntFrom(individualNumbers[1]);
+            return result;
         }
     }
 
