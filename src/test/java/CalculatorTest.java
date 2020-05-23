@@ -35,4 +35,10 @@ public class CalculatorTest {
         int result = calculator.add("1,2");
         assertThat(result).isEqualTo(3);
     }
+
+    @Test
+    void shouldReturnSumOfThreeNumbers() {
+        int result = calculator.add("1,2,3");
+        assertThat(result).isEqualTo(6);
+    }
 }
