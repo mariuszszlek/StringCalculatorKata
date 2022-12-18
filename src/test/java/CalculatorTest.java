@@ -29,4 +29,10 @@ public class CalculatorTest {
         int result = calculator.add("1,2");
         assertThat(result).isEqualTo(3);
     }
+
+    @Test
+    void shouldAddThreeNumbersSeparatedWithComma() {
+        int result = calculator.add("1,2,4");
+        assertThat(result).isEqualTo(7);
+    }
 }
