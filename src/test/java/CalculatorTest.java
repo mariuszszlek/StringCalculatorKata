@@ -23,4 +23,10 @@ public class CalculatorTest {
         int result = calculator.add("1");
         assertThat(result).isEqualTo(1);
     }
+
+    @Test
+    void shouldAddTwoNumberSeparatedWithComma() {
+        int result = calculator.add("1,2");
+        assertThat(result).isEqualTo(3);
+    }
 }
