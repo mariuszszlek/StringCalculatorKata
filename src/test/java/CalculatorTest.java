@@ -35,4 +35,10 @@ public class CalculatorTest {
         int result = calculator.add("1,2,4");
         assertThat(result).isEqualTo(7);
     }
+
+    @Test
+    void shouldAddThreeNumbersSeparatedWithCommaAndNewLine() {
+        int result = calculator.add("1,2\n5");
+        assertThat(result).isEqualTo(8);
+    }
 }
